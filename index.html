@@ -135,3 +135,388 @@
           text-align: center;
           max-width: 800px;
           margin: 0 auto;
+        }
+
+        .hero-tag {
+          font-size: 0.85rem;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          color: #6fb1fc;
+          display: inline-block;
+          margin-bottom: 15px;
+          font-weight: 600;
+        }
+
+        .hero-content h1 {
+          font-size: 3.5rem;
+          color: #ffffff;
+          font-weight: 300;
+          margin-bottom: 25px;
+          letter-spacing: -1px;
+        }
+
+        .hero-mission {
+          font-size: 1.15rem;
+          color: rgba(255, 255, 255, 0.8);
+          max-width: 750px;
+          margin: 0 auto 35px auto;
+        }
+
+        .valores-resumo {
+          display: flex;
+          justify-content: center;
+          gap: 30px;
+          flex-wrap: wrap;
+        }
+
+        .valores-resumo span {
+          font-size: 0.9rem;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+
+        .valores-resumo i { color: #6fb1fc; }
+
+        .slider-dots {
+          position: absolute;
+          bottom: 25px;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          gap: 10px;
+          z-index: 10;
+        }
+
+        .dot {
+          width: 8px;
+          height: 8px;
+          background: rgba(255, 255, 255, 0.3);
+          border-radius: 50%;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+
+        .dot.active {
+          background: #6fb1fc;
+          width: 24px;
+          border-radius: 4px;
+        }
+
+        /* ==========================================================================
+           4. SOBRE NÓS
+           ========================================================================== */
+        .sobre-layout { display: flex; flex-direction: column; gap: 50px; }
+        
+        .empresa-perfil p {
+          font-size: 1.1rem;
+          color: rgba(255, 255, 255, 0.8);
+          margin-bottom: 20px;
+          text-align: justify;
+        }
+
+        .empresa-perfil strong { color: #6fb1fc; }
+
+        .identidade-cards {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 25px;
+        }
+
+        @media (max-width: 768px) {
+          .identidade-cards { grid-template-columns: 1fr; }
+          .contact-container { grid-template-columns: 1fr !important; }
+        }
+
+        .id-card {
+          background: rgba(255, 255, 255, 0.02);
+          border: 1px solid rgba(255, 255, 255, 0.06);
+          padding: 30px;
+          border-radius: 16px;
+        }
+
+        .id-card h4 {
+          font-size: 1.2rem;
+          color: #ffffff;
+          margin-bottom: 12px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .id-card h4 i { color: #6fb1fc; }
+
+        .equipa-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+          gap: 25px;
+          margin-top: 40px;
+        }
+
+        .membro-card {
+          background: rgba(255, 255, 255, 0.02);
+          border: 1px solid rgba(255, 255, 255, 0.06);
+          padding: 40px 30px;
+          border-radius: 20px;
+          text-align: center;
+        }
+
+        .ceo-card { border-color: rgba(111, 177, 252, 0.2); }
+        .placeholder-card { border-style: dashed; opacity: 0.6; }
+        .avatar-placeholder { font-size: 2.2rem; color: #6fb1fc; margin-bottom: 20px; }
+        .cargo { font-size: 0.85rem; text-transform: uppercase; color: #6fb1fc; margin-bottom: 15px; }
+
+        /* ==========================================================================
+           5. PORTFÓLIO E FILTROS
+           ========================================================================== */
+        .portfolio-filtros { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap; }
+        
+        .filtro-btn {
+          padding: 10px 22px;
+          background: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          color: #ffffff;
+          border-radius: 30px;
+          cursor: pointer;
+          transition: all 0.3s;
+        }
+
+        .filtro-btn.active {
+          background: #6fb1fc;
+          border-color: #6fb1fc;
+          color: #0f2027;
+          font-weight: 600;
+        }
+
+        .portfolio-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+          gap: 30px;
+        }
+
+        .portfolio-item {
+          background: rgba(255, 255, 255, 0.01);
+          border: 1px solid rgba(255, 255, 255, 0.06);
+          border-radius: 20px;
+          overflow: hidden;
+          transition: all 0.3s;
+        }
+
+        .portfolio-item.hide { display: none !important; }
+
+        .item-media-placeholder {
+          background: rgba(255, 255, 255, 0.02);
+          height: 240px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 15px;
+          color: rgba(255, 255, 255, 0.3);
+        }
+
+        .item-media-placeholder i { font-size: 2.5rem; }
+        .item-detalhes { padding: 25px; }
+
+        /* ==========================================================================
+           6. CONTACTOS & REDES
+           ========================================================================== */
+        .contact-container { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; }
+        .logos-grid-placeholder { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin-bottom: 40px;}
+        .logo-box { border: 1px dashed rgba(255, 255, 255, 0.1); height: 80px; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: rgba(255,255,255,0.3); }
+        
+        form { display: flex; flex-direction: column; gap: 18px; }
+        input, select, textarea { padding: 16px; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02); border-radius: 12px; color: white; }
+        button { padding: 16px; background: #ffffff; color: #0f2027; border: none; border-radius: 12px; cursor: pointer; font-weight: 600; transition: all 0.3s; }
+        button:hover { background: #6fb1fc; color: white; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">CASTELO ART & DESIGN</div>
+            <nav class="nav-links">
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre Nós</a>
+                <a href="#portfolio">Portfólio</a>
+                <a href="#contactos">Contactos</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio">
+        <div class="hero-slider">
+            <div class="slide active">
+                <div class="hero-content">
+                    <span class="hero-tag">Design Visual</span>
+                    <h1>Identidades Visuais Autênticas</h1>
+                    <p class="hero-mission">Transformamos conceitos em marcas memoráveis através de design estratégico e assets visuais de alta qualidade.</p>
+                    <div class="valores-resumo">
+                        <span><i class="fas fa-check"></i> Vetores de Alta Precisão</span>
+                        <span><i class="fas fa-check"></i> Design Exclusivo</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="hero-content">
+                    <span class="hero-tag">Produção Digital</span>
+                    <h1>Fotografia & Retoque High-End</h1>
+                    <p class="hero-mission">Tratamento de imagem avançado e manipulação digital com rigor profissional para destacar os seus projetos.</p>
+                    <div class="valores-resumo">
+                        <span><i class="fas fa-check"></i> Edição Avançada</span>
+                        <span><i class="fas fa-check"></i> Qualidade Premium</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slider-dots">
+                <div class="dot active" onclick="currentSlide(0)"></div>
+                <div class="dot" onclick="currentSlide(1)"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p class="sec-subtitulo">Criatividade fundamentada no profissionalismo e inovação digital.</p>
+        
+        <div class="sobre-layout">
+            <div class="empresa-perfil">
+                <p>A <strong>Castelo Art & Design</strong> dedica-se ao desenvolvimento de soluções visuais estratégicas. Focados no mercado de design de comunicação, ajudamos marcas e negócios a alcançar uma comunicação estética clara, marcante e adaptada aos padrões modernos do ecossistema digital.</p>
+            </div>
+
+            <div class="identidade-cards">
+                <div class="id-card">
+                    <h4><i class="fas fa-bullseye"></i> Missão</h4>
+                    <p>Entregar excelência em design gráfico, identidades corporativas e edição de imagem que potencializam a presença visual dos nossos parceiros.</p>
+                </div>
+                <div class="id-card">
+                    <h4><i class="fas fa-eye"></i> Visão</h4>
+                    <p>Ser um estúdio de referência em assets visuais e design de ponta, reconhecido pela precisão técnica e inovação criativa.</p>
+                </div>
+            </div>
+
+            <div class="equipa-grid">
+                <div class="membro-card ceo-card">
+                    <div class="avatar-placeholder"><i class="fas fa-user-tie"></i></div>
+                    <div class="cargo">Fundador / Diretor Criativo</div>
+                    <h3>Elieser Castelo</h3>
+                    <p>Especialista em criação de logótipos vetoriais, assets visuais e pós-produção avançada de imagem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfólio</h2>
+        <p class="sec-subtitulo">Explore uma seleção dos nossos projetos e exposições recentes.</p>
+        
+        <div class="portfolio-filtros">
+            <button class="filtro-btn active" onclick="filtrar('todos')">Todos</button>
+            <button class="filtro-btn" onclick="filtrar('branding')">Branding & Logos</button>
+            <button class="filtro-btn" onclick="filtrar('retouch')">Edição & Fotografia</button>
+        </div>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item branding">
+                <div class="item-media-placeholder">
+                    <i class="fas fa-vector-square"></i>
+                    <span>Logotipo Vetorial Vet</span>
+                </div>
+                <div class="item-detalhes">
+                    <h3>Identidade Corporativa</h3>
+                    <p>Desenvolvimento completo de logótipo geométrico e manual de normas gráficas.</p>
+                </div>
+            </div>
+            <div class="portfolio-item retouch">
+                <div class="item-media-placeholder">
+                    <i class="fas fa-sliders-h"></i>
+                    <span>Retoque High-End</span>
+                </div>
+                <div class="item-detalhes">
+                    <h3>Tratamento de Imagem</h3>
+                    <p>Retoque avançado de estúdio, equilíbrio cromático e modificação de vestuário.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contactos">
+        <h2>Contactos</h2>
+        <p class="sec-subtitulo">Vamos dar vida ao seu próximo projeto visual?</p>
+        
+        <div class="contact-container">
+            <div>
+                <h3>Parceiros & Marcas</h3>
+                <div class="logos-grid-placeholder">
+                    <div class="logo-box">Estúdio</div>
+                    <div class="logo-box">Multiservice</div>
+                </div>
+                <p>Disponíveis para projetos locais e colaborações de cariz internacional.</p>
+            </div>
+
+            <div>
+                <form onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso!');">
+                    <input type="text" placeholder="Seu Nome" required>
+                    <input type="email" placeholder="Seu E-mail" required>
+                    <select required>
+                        <option value="" disabled selected hidden>Selecione o Serviço</option>
+                        <option value="branding">Identidade Visual / Logo</option>
+                        <option value="retouch">Retoque de Imagem</option>
+                        <option value="outro">Outro Projeto Digital</option>
+                    </select>
+                    <textarea placeholder="Fale-nos um pouco sobre o seu projeto..." rows="5" required></textarea>
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Lógica do Carrossel (Hero Slider)
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(index) {
+            slides.forEach(s => s.classList.remove('active'));
+            dots.forEach(d => d.classList.remove('active'));
+            
+            currentSlideIndex = index;
+            if(currentSlideIndex >= slides.length) currentSlideIndex = 0;
+            if(currentSlideIndex < 0) currentSlideIndex = slides.length - 1;
+            
+            slides[currentSlideIndex].classList.add('active');
+            dots[currentSlideIndex].classList.add('active');
+        }
+
+        function currentSlide(index) {
+            showSlide(index);
+        }
+
+        // Auto rotação do slider a cada 5 segundos
+        setInterval(() => {
+            showSlide(currentSlideIndex + 1);
+        }, 5000);
+
+        // Lógica de Filtro do Portfólio
+        function filtrar(categoria) {
+            // Atualizar estado ativo do botão
+            const botoes = document.querySelectorAll('.filtro-btn');
+            botoes.forEach(btn => btn.classList.remove('active'));
+            if(event) event.target.classList.add('active');
+
+            // Filtrar os itens
+            const itens = document.querySelectorAll('.portfolio-item');
+            itens.forEach(item => {
+                if (categoria === 'todos' || item.classList.contains(categoria)) {
+                    item.classList.remove('hide');
+                } else {
+                    item.classList.add('hide');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
