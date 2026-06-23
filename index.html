@@ -209,8 +209,8 @@
        <!-- ==========================================================================
        5. ABA CONTACTE-NOS (COTAÇÃO, CANAIS OFICIAIS & GOOGLE MAPS)
        ========================================================================== -->
-    <section id="contacto">
-         <h2>Contacte-nos</h2>
+       <section id="contacto">
+        <h2>Contacte-nos</h2>
         <div class="empresas-parceiras-section">
             <h4>Empresas e Parceiros para os quais já fizemos trabalhos</h4>
             <div class="logos-grid-placeholder">
@@ -222,7 +222,7 @@
         <div class="contact-container">
             <div class="form-box">
                 <h3>Pedir Cotação</h3>
-                <p class="form-sub" style="color:rgba(255,255,255,0.5); font-size:0.9rem; margin-bottom:20px;">Conte-nos sobre o projeto e receive uma proposta detalhada.</p>
+                <p class="form-sub" style="color:rgba(255,255,255,0.5); font-size:0.9rem; margin-bottom:20px;">Conte-nos sobre o projeto e receba uma proposta detalhada.</p>
                 <form id="form-cotacao" action="https://formspree.io" method="POST">
                     <input type="text" id="cotacao-nome" name="Nome" placeholder="Seu Nome / Empresa" required>
                     <input type="email" id="cotacao-email" name="Email" placeholder="Seu E-mail" required>
@@ -231,7 +231,7 @@
                         <option value="Web Design">Web Design Minimalista</option>
                         <option value="Editorial">Design Editorial</option>
                     </select>
-                    <textarea id="cotacao-mensagem" name="Mensagem" placeholder="Sobre os requisitos do projeto..." rows="4" required></textarea>
+                    <textarea id="cotacao-mensagem" name="Mensagem" placeholder="Fale sobre os requisitos do projeto..." rows="4" required></textarea>
                     <button type="submit" id="btn-enviar-cotacao">Enviar Solicitação</button>
                     <div id="mensagem-status"></div>
                 </form>
@@ -249,254 +249,3 @@
                         <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
                         <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://wa.me" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="rodape-container">
-            <div class="rodape-coluna">
-                <span style="font-weight:600; letter-spacing:1px;">CASTELO ART & DESIGN</span>
-                <p style="font-size:0.85rem; color:rgba(255,255,255,0.4); margin-top:10px;">Soluções visuais sofisticadas e intemporais no mercado moçambicano.</p>
-            </div>
-            <div class="rodape-coluna">
-                <h5>Navegação</h5>
-                <ul class="rodape-links">
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#sobre">Sobre Nós</a></li>
-                </ul>
-            </div>
-            <div class="rodape-coluna">
-                <h5>Suporte</h5>
-                <ul class="rodape-links">
-                    <li><a href="#contacto">Pedir Cotação</a></li>
-                    <li><a href="mailto:casteloartdesign@gmail.com">Suporte Geral</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="rodape-direitos">
-            <p>&copy; 2026 Castelo Art & Design. Todos os direitos reservados.</p>
-            <p style="color:rgba(255,255,255,0.2);">Design & Multimédia em Moçambique.</p>
-        </div>
-    </footer>
-
-    <a href="https://wa.me" class="whatsapp-flutuante" target="_blank"><i class="fab fa-whatsapp"></i></a>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const slides = document.querySelectorAll(".slide");
-            const dots = document.querySelectorAll(".dot");
-            let slideAtual = 0;
-            function mostrarSlide(index) {
-                slides.forEach(s => s.classList.remove("active"));
-                dots.forEach(d => d.classList.remove("active"));
-                if(slides[index]) slides[index].classList.add("active");
-                if(dots[index]) dots[index].classList.add("active");
-            }
-            setInterval(() => {
-                slideAtual = (slideAtual + 1) % slides.length;
-                mostrarSlide(slideAtual);
-            }, 4000);
-            dots.forEach((dot, index) => {
-                dot.addEventListener("click", () => { slideAtual = index; mostrarSlide(slideAtual); });
-            });
-            const botoes = document.querySelectorAll(".filtro-btn");
-            const itens = document.querySelectorAll(".portfolio-item");
-            botoes.forEach(btn => {
-                btn.addEventListener("click", () => {
-                    botoes.forEach(b => b.classList.remove("active"));
-                    btn.classList.add("active");
-                    const filtro = btn.getAttribute("data-filter");
-                    itens.forEach(item => {
-                        if (filtro === "todos" || item.getAttribute("data-categoria") === filtro) {
-                            item.classList.remove("hide");
-                        } else {
-                            item.classList.add("hide");
-                        }
-                    });
-                });
-            });
-            const form = document.getElementById("form-cotacao");
-            const status = document.getElementById("mensagem-status");
-            if(form) {
-                form.addEventListener("submit", async (e) => {
-                    e.preventDefault();
-                    status.textContent = "A processar envio...";
-                    status.className = "sucesso";
-                    status.style.display = "block";
-                    const data = new FormData(form);
-                    try {
-                        const response = await fetch(form.action, { method: form.method, body: data, headers: {'Accept': 'application/json'} });
-                        if (response.ok) {
-                            status.textContent = "Obrigado! O seu pedido de cotação foi entregue com sucesso.";
-                            form.reset();
-                        } else { status.textContent = "Lamentamos, ocorreu um erro ao enviar."; status.className = "erro"; }
-                    } catch { status.textContent = "Erro de ligação à rede."; status.className = "erro"; }
-                });
-            }
-        });
-    </script>
-</body>
-</html>
-
-        <h2>Contacto</h2>
-        <p class="sec-subtitulo">Preparados para tornar o seu negócio mais produtivo e visualmente relevante.</p>
-        
-        <h3 style="text-align: center; font-weight: 300; font-size: 1.15rem; margin-bottom: 40px; color: rgba(255,255,255,0.7); letter-spacing: 0.5px;">
-            <em>"Pare de se preocupar com Tecnologias, mantenha o foco no seu negócio."</em>
-        </h3>
-        
-        <!-- Lista de Empresas Parceiras / Clientes (Estilo NetworkMoz) -->
-        <div class="empresas-parceiras-section">
-            <div class="logos-grid-placeholder">
-                <div class="logo-box">[Empresa Parceira 1]</div>
-                <div class="logo-box">[Empresa Parceira 2]</div>
-                <div class="logo-box">[Grandes Corporações]</div>
-                <div class="logo-box">[PMEs Locais]</div>
-            </div>
-        </div>
-
-        <div class="contact-container">
-            <!-- Formulário de Cotação Conectado ao Formspree -->
-            <div class="form-box">
-                <h3>Pedir Cotação</h3>
-                <p class="form-sub" style="color:rgba(255,255,255,0.5); font-size:0.9rem; margin-bottom:20px;">Conte-nos sobre o seu projeto e receba uma proposta personalizada.</p>
-                <form id="form-cotacao" action="https://formspree.io" method="POST">
-                    <input type="text" id="cotacao-nome" name="Nome" placeholder="Seu Nome / Nome da Empresa" required>
-                    <input type="email" id="cotacao-email" name="Email" placeholder="Seu E-mail de Contacto" required>
-                    <select id="cotacao-servico" name="Servico" required>
-                        <option value="Branding">Design e Marketing (Branding & Identidade)</option>
-                        <option value="Web Design">Website e Software (Web Design Minimalista)</option>
-                        <option value="Editorial">Design Editorial & Modelação 3D</option>
-                    </select>
-                    <textarea id="cotacao-mensagem" name="Mensagem" placeholder="Fale sobre os requisitos do seu projeto..." rows="4" required></textarea>
-                    <button type="submit" id="btn-enviar-cotacao">Enviar Solicitação</button>
-                    <div id="mensagem-status"></div>
-                </form>
-            </div>
-            
-            <!-- Canais Oficiais de Atendimento -->
-            <div class="info-caixa">
-                <h3>Canais Oficiais</h3>
-                <p style="font-size: 0.95rem; color: rgba(255,255,255,0.6); margin-bottom: 10px;">Fale diretamente connosco através dos nossos canais autorizados:</p>
-                
-                <div class="info-contactos">
-                    <p><i class="fas fa-map-marker-alt"></i> <span>Matola - Liberdade, Moçambique</span></p>
-                    <p><i class="fas fa-envelope"></i> <span><a href="mailto:casteloartdesign@gmail.com" class="link-direto">casteloartdesign@gmail.com</a></span></p>
-                    <p><i class="fas fa-phone-alt"></i> <span><a href="tel:+258878871087" class="link-direto">+258 87 887 1087</a></span></p>
-                </div>
-
-                <!-- Botões de Redes Sociais com Links Reais -->
-                <div class="redes-sociais-box" style="margin-top: 10px;">
-                    <div class="redes-icons">
-                        <a href="https://fb.com" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://wa.me" target="_blank" rel="noopener" title="WhatsApp Business"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Integração do Google Maps Dark Mode -->
-        <div class="grid-contacto-mapa">
-            <div class="mapa-box">
-                <iframe src="https://google.com" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div style="display:flex; flex-direction:column; justify-content:center; background:rgba(255,255,255,0.01); border:1px solid rgba(255,255,255,0.06); padding:30px; border-radius:16px; gap: 15px;">
-                <h4 style="color: white; font-size: 1.1rem; font-weight: 500;">Disponibilidade Geográfica</h4>
-                <p style="font-size:0.95rem; color:rgba(255,255,255,0.5); text-align:justify; font-weight:300; margin: 0;">Prontidão para atendimento presencial focado na província de Maputo e Matola, estendendo suporte digital e remoto integral a todas as províncias de Moçambique.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================================================
-       6. RODAPÉ INSTITUCIONAL (FOOTER)
-       ========================================================================== -->
-    <footer>
-        <div class="rodape-container">
-            <div class="rodape-coluna">
-                <span class="logo">CASTELO ART & DESIGN</span>
-                <p style="font-size:0.85rem; color:rgba(255,255,255,0.4); margin-top:10px;">Dinamizando o mercado visual em Moçambique com soluções sofisticadas e intemporais.</p>
-            </div>
-            <div class="rodape-coluna">
-                <h5>Navegação</h5>
-                <ul class="rodape-links">
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#sobre">Sobre Nós</a></li>
-                    <li><a href="#portfolio">Portfólio</a></li>
-                </ul>
-            </div>
-            <div class="rodape-coluna">
-                <h5>Suporte</h5>
-                <ul class="rodape-links">
-                    <li><a href="#contacto">Pedir Cotação</a></li>
-                    <li><a href="mailto:casteloartdesign@gmail.com">Suporte via E-mail</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="rodape-direitos">
-            <p>&copy; 2026 Castelo Art & Design. Todos os direitos reservados.</p>
-            <p style="color:rgba(255,255,255,0.25);">Designed by Castelo | Moçambique.</p>
-        </div>
-    </footer>
-
-    <!-- ==========================================================================
-       7. BOTÃO FLUTUANTE DO WHATSAPP CORPORATIVO
-       ========================================================================== -->
-    <a href="https://wa.me" class="whatsapp-flutuante" target="_blank" rel="noopener" title="Conversar no WhatsApp Oficial">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- ==========================================================================
-       8. LÓGICA CORE DE EXECUÇÃO JAVASCRIPT
-       ========================================================================== -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            // Slider Hero Automático
-            const slides = document.querySelectorAll(".slide");
-            const dots = document.querySelectorAll(".dot");
-            let slideAtual = 0;
-            function mostrarSlide(index) {
-                slides.forEach(s => s.classList.remove("active"));
-                dots.forEach(d => d.classList.remove("active"));
-                if(slides[index]) slides[index].classList.add("active");
-                if(dots[index]) dots[index].classList.add("active");
-            }
-            setInterval(() => {
-                slideAtual = (slideAtual + 1) % slides.length;
-                mostrarSlide(slideAtual);
-            }, 4000);
-            dots.forEach((dot, index) => {
-                dot.addEventListener("click", () => { slideAtual = index; mostrarSlide(slideAtual); });
-            });
-
-            // Filtros Dinâmicos do Portfólio
-            const botoes = document.querySelectorAll(".filtro-btn");
-            const itens = document.querySelectorAll(".portfolio-item");
-            botoes.forEach(btn => {
-                btn.addEventListener("click", () => {
-                    botoes.forEach(b => b.classList.remove("active"));
-                    btn.classList.add("active");
-                    const filtro = btn.getAttribute("data-filter");
-                    itens.forEach(item => {
-                        if (filtro === "todos" || item.getAttribute("data-categoria") === filtro) {
-                            item.classList.remove("hide");
-                        } else {
-                            item.classList.add("hide");
-                        }
-                    });
-                });
-            });
-
-            // Comunicação Assíncrona via AJAX com Formspree
-            const form = document.getElementById("form-cotacao");
-            const status = document.getElementById("mensagem-status");
-            if(form) {
-                form.addEventListener("submit", async (e) => {
-                    e.preventDefault();
-                    status.textContent = "A processar envio...";
-                    status.className = "sucesso";
