@@ -7,30 +7,22 @@
     <link href="https://googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="https://cloudflare.com">
     <style>
-        /* RESET INTEGRAL E PALETA LUXURY DARK */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         body { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: rgba(255, 255, 255, 0.85); line-height: 1.6; min-height: 100vh; overflow-x: hidden; }
-        a { text-decoration: none; color: inherit; display: inline-block; }
-        li { list-style: none; }
-
-        /* NAVEGAÇÃO RESPONSIVA */
+        a { text-decoration: none; color: inherit; }
         header { position: fixed; width: 100%; top: 0; background: rgba(15, 32, 39, 0.98); border-bottom: 1px solid rgba(255, 255, 255, 0.08); z-index: 1000; }
         .nav-container { max-width: 1200px; margin: 0 auto; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-weight: 700; font-size: 1.2rem; letter-spacing: 1.5px; color: #ffffff; }
         .nav-links { display: flex; gap: 30px; }
         .nav-links a { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; font-weight: 500; transition: 0.3s; }
         .nav-links a:hover { color: #6fb1fc; }
-
-        /* TIMING E ESTRUTURA DE SECÇÕES */
         section { padding: 120px 20px 60px 20px; max-width: 1200px; margin: 0 auto; }
         .sec-subtitulo { color: rgba(255, 255, 255, 0.5); font-size: 1rem; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 2px; }
         h2 { font-size: 2.4rem; font-weight: 700; color: #ffffff; margin-bottom: 15px; border-left: 5px solid #6fb1fc; padding-left: 15px; text-transform: uppercase; }
         h3 { font-size: 1.6rem; font-weight: 600; color: #ffffff; margin-bottom: 25px; }
-
-        /* CARROSSEL INTUITIVO DA HOME */
         .hero-slider { position: relative; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 24px; padding: 60px 40px; margin-top: 30px; text-align: center; overflow: hidden; }
         .slide { display: none; }
-        .slide.active { display: block; animation: fadeIn 0.5s ease-in-out; }
+        .slide.active { display: block; }
         .hero-tag { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 3px; color: #6fb1fc; margin-bottom: 20px; display: inline-block; font-weight: 700; }
         .hero-content h1 { font-size: 3.5rem; color: #ffffff; font-weight: 700; margin-bottom: 25px; }
         .hero-mission { font-size: 1.2rem; max-width: 800px; margin: 0 auto 40px auto; color: rgba(255,255,255,0.8); }
@@ -59,7 +51,6 @@
         </nav>
     </header>
 
-    <!-- ABA INÍCIO -->
     <section id="inicio">
         <div class="hero-slider">
             <div class="slide active">
@@ -87,7 +78,6 @@
         </div>
     </section>
 
-    <!-- SEÇÃO DE SERVIÇOS -->
     <style>
         .servicos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px; }
         .servico-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 16px; padding: 35px 25px; transition: 0.3s; }
@@ -122,8 +112,6 @@
             </div>
         </div>
     </section>
-
-    <!-- ABA SOBRE NÓS -->
     <style>
         .sobre-layout { display: flex; flex-direction: column; gap: 50px; }
         .empresa-perfil p { font-size: 1.1rem; color: rgba(255, 255, 255, 0.8); margin-bottom: 20px; text-align: justify; font-weight: 300; }
@@ -132,7 +120,7 @@
         .id-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.06); padding: 35px; border-radius: 16px; }
         .id-card h4 { font-size: 1.3rem; color: #ffffff; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
         .id-card h4 i { color: #6fb1fc; }
-        .equipa-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-top: 20px; }
+        .equipa-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 20px; }
         .membro-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.06); padding: 40px 30px; border-radius: 20px; text-align: center; transition: 0.3s; cursor: pointer; display: block; }
         .membro-card:hover { border-color: #6fb1fc; background: rgba(111, 177, 252, 0.02); transform: translateY(-3px); }
         .ceo-card { border-color: rgba(111, 177, 252, 0.2); }
@@ -145,112 +133,103 @@
             <div class="empresa-perfil">
                 <h3>Soluções criadas exclusivamente para o seu negócio.</h3>
                 <p>Fundada em <strong>2019</strong> por um estudante de Licenciatura em Ensino de Educação Visual com habilitações em Design e Multimédia, a Castelo Art & Design nasceu com o propósito claro de <strong>dinamizar o mercado visual em Moçambique</strong>.</p>
-                <p>O nosso foco sempre foi dar a oportunidade a pequenas e médias empresas (PMEs) de enfatizar e consolidar suas marcas com <strong>baixo custo e alta performance</strong>. Fornecemos soluções adaptadas para aumentar o impacto visual à medida que a sua empresa escala.</p>
+                <p>O nosso foco sempre foi dar a oportunidade a pequenas e médias empresas (PMEs) de enfatizar e consolidar suas marcas com <strong>baixo custo e alta performance</strong>.</p>
             </div>
             
             <div class="identidade-cards">
                 <div class="id-card">
                     <h4><i class="fas fa-bullseye"></i> Missão</h4>
-                    <p>Executar serviços visuais e de design atendendo às necessidades de nossos clientes sempre com excelência, transparência e pontualidade, superando expectativas.</p>
+                    <p>Executar serviços visuais e de design atendendo às necessidades de nossos clientes sempre com excelência, transparência e pontualidade.</p>
                 </div>
                 <div class="id-card">
                     <h4><i class="fas fa-eye"></i> Visão</h4>
-                    <p>Ser referência nacional como empresa de serviços na área de Tecnologia, Design e Multimédia, com preços competitivos e total comprometimento corporativo.</p>
+                    <p>Ser referência nacional como empresa de serviços na área de Tecnologia, Design e Multimédia, com total comprometimento corporativo.</p>
                 </div>
             </div>
 
             <div class="ceo-equipa-section">
                 <div class="equipa-grid">
-                    <!-- CARTÃO DO CEO SINCRONIZADO COM DADOS DO CURRÍCULO -->
                     <a href="https://wa.me" target="_blank" rel="noopener" class="membro-card ceo-card">
                         <div class="avatar-placeholder"><i class="fas fa-graduation-cap"></i></div>
                         <h3>Elieser dos Santos Castelo</h3>
                         <p class="cargo">Fundador, CEO & Diretor Criativo</p>
-                        <p class="biografia" style="text-align: justify; font-size: 0.95rem;">
-                            Natural da Zambézia e graduando em Educação Visual pela <strong>Universidade Save</strong>. Especialista em comunicação e estratégia moral corporativa, com forte domínio milimétrico no <strong>Pacote Adobe, CorelDraw, Fotografia e Modelação Cinema 4D</strong>. Atua sob pressão com dinamismo e responsabilidade técnica.
-                        </p>
+                        <p class="biografia">Especialista em Design e Multimédia pela Universidade Save. Domina o <strong>Pacote Adobe, CorelDraw e Cinema 4D</strong>. [Clique para ver o CV]</p>
                     </a>
 
-                    <!-- CARTÃO DE PARCEIROS REDIRECIONÁVEL -->
                     <a href="#contacto" class="membro-card placeholder-card">
                         <div class="avatar-placeholder"><i class="fas fa-handshake"></i></div>
                         <h3>Parceiros & Colaboradores</h3>
                         <p class="cargo">Rede de Clientes Completos</p>
-                        <p class="biografia">Clique aqui para abrir a nossa área oficial de cotações e analisar as opções de integração customizadas da nossa rede integrada de parceiros locais.</p>
+                        <p class="biografia">Clique aqui para abrir a nossa página exclusiva com os detalhes e portefólio completo dos nossos clientes e parceiros integrados.</p>
                     </a>
                 </div>
             </div>
         </div>
     </section>
-    <!-- ABA PORTFÓLIO -->
     <style>
+        .portfolio-filtros { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap; }
+        .filtro-btn { padding: 12px 26px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; font-weight: 500; border-radius: 30px; cursor: pointer; transition: 0.3s; }
+        .filtro-btn:hover { background: rgba(255, 255, 255, 0.08); color: #ffffff; transform: translateY(-2px); }
+        .filtro-btn.active { background: #6fb1fc; border-color: #6fb1fc; color: #0f2027; font-weight: 600; box-shadow: 0 4px 15px rgba(111, 177, 252, 0.25); }
         .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
         .portfolio-item { background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 20px; overflow: hidden; transition: 0.3s; display: block; }
-        .portfolio-item:hover { border-color: #6fb1fc; transform: translateY(-4px); }
+        .portfolio-item:hover { transform: translateY(-6px); border-color: #6fb1fc; background: rgba(255, 255, 255, 0.03); }
         .portfolio-item.hide { display: none !important; }
-        .item-media-placeholder { background: rgba(255, 255, 255, 0.02); height: 220px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: rgba(255,255,255,0.2); border-bottom: 1px solid rgba(255,255,255,0.06); }
-        .item-detalhes { padding: 20px; }
-        .item-detalhes h4 { color: #ffffff; margin-bottom: 5px; font-size: 1.15rem; }
-        .item-detalhes p { color: rgba(255,255,255,0.5); font-size: 0.9rem; }
+        .item-media-placeholder { background: rgba(255, 255, 255, 0.02); height: 240px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; color: rgba(255, 255, 255, 0.3); border-bottom: 1px solid rgba(255, 255, 255, 0.06); font-size: 2.5rem; }
+        .item-detalhes { padding: 25px; }
+        .item-detalhes h4 { color: #ffffff; font-size: 1.15rem; margin-bottom: 5px; }
+        .item-detalhes p { color: rgba(255, 255, 255, 0.5); font-size: 0.9rem; }
     </style>
 
     <section id="portfolio">
         <h2>Projectos</h2>
-        <p class="sec-subtitulo">Confira alguns dos nossos serviços.</p>
+        <p class="sec-subtitulo">Confira alguns dos nossos últimos projetos e soluções desenvolvidas.</p>
+        
         <div class="portfolio-filtros">
-            <button class="filtro-btn active" data-filter="todos">Todos</button>
-            <button class="filtro-btn" data-filter="branding">Design</button>
-            <button class="filtro-btn" data-filter="web">Página Web</button>
+            <button class="filtro-btn active" data-filter="todos">Todos Trabalhos</button>
+            <button class="filtro-btn" data-filter="branding">Design & Branding</button>
+            <button class="filtro-btn" data-filter="web">Páginas Web</button>
         </div>
+        
         <div class="portfolio-grid">
-            <!-- PROJETO 1: COM LINK REAL PARA O SEU BEHANCE OFICIAL -->
-            <a href="https://www.behance.net/gallery/210518501/Identidade-Visual-pessoal/modules/1196387031" target="_blank" rel="noopener" class="portfolio-item" data-categoria="branding">
-                <div class="item-media-placeholder"><i class="fab fa-behance" style="color: #0057ff;"></i></div>
+            <!-- Link do Behance adicionado na Identidade Visual -->
+            <a href="https://behance.net" target="_blank" rel="noopener" class="portfolio-item" data-categoria="branding">
+                <div class="item-media-placeholder"><i class="fas fa-palette"></i></div>
                 <div class="item-detalhes">
-                    <h4>Identidade Visual Pessoal</h4>
-                    <p>Design Comercial & Portfólio [Behance] <i class="fas fa-external-link-alt" style="font-size:0.8rem; margin-left:3px;"></i></p>
+                    <h4>Identidade Visual Pessoal (Behance)</h4>
+                    <p>Design de Logótipo & Branding Criativo</p>
                 </div>
             </a>
-            
+
             <div class="portfolio-item" data-categoria="web">
-                <div class="item-media-placeholder"><i class="fas fa-desktop"></i></div>
-                <div class="item-detalhes"><h4>Website Corporativo</h4><p>Web Design Responsivo</p></div>
+                <div class="item-media-placeholder"><i class="fas fa-laptop-code"></i></div>
+                <div class="item-detalhes"><h4>Plataforma Corporativa</h4><p>[Campos Gráficos / UI-UX]</p></div>
             </div>
         </div>
     </section>
-    <!-- ABA CONTACTE-NOS -->
     <style>
-        .grid-contacto-mapa { margin-top: 50px; width: 100%; }
-        .mapa-box { width: 100%; height: 350px; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08); }
-        .mapa-box iframe { width: 100% !important; height: 100% !important; border: 0 !important; filter: grayscale(1) invert(0.9) contrast(1.2); }
+        .contact-container { display: grid; grid-template-columns: 1.2fr 1fr; gap: 50px; margin-bottom: 40px; }
+        .grid-contacto-mapa { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; margin-top: 40px; }
+        .mapa-box { width: 100%; height: 380px; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08); }
+        .mapa-box iframe { width: 100% !important; height: 100% !important; border: 0 !important; filter: grayscale(1) invert(0.95) contrast(1.2); }
         .info-caixa { display: flex; flex-direction: column; gap: 15px; background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.06); padding: 30px; border-radius: 16px; }
-        
-        /* RODAPÉ ESTRUTURADO DE MARGEM EXTREMA TOTAL (ESQUERDA À DIREITA) */
-        footer {
-          background: rgba(10, 21, 26, 0.99);
-          border-top: 1px solid rgba(255, 255, 255, 0.06);
-          padding: 60px 0 30px 0;
-          margin-top: 80px;
-          width: 100vw;
-          position: relative;
-          left: 50%;
-          right: 50%;
-          margin-left: -50vw;
-          margin-right: -50vw;
-        }
+        .redes-icons { display: flex; gap: 15px; }
+        .redes-icons a { width: 45px; height: 45px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: 0.3s; }
+        .redes-icons a:hover { transform: translateY(-4px); border-color: #6fb1fc; }
+        #mensagem-status { margin-top: 15px; padding: 12px; border-radius: 8px; display: none; }
+        #mensagem-status.sucesso { display: block; background: rgba(37, 211, 102, 0.1); border: 1px solid #25d366; color: #25d366; }
+        footer { background: rgba(10, 21, 26, 0.98); border-top: 1px solid rgba(255, 255, 255, 0.06); padding: 70px 0 30px 0; margin-top: 60px; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; }
         .rodape-conteudo-global { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         .rodape-container { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; padding-bottom: 40px; }
         .rodape-coluna { display: flex; flex-direction: column; gap: 15px; }
         .rodape-logo { font-weight: 700; font-size: 1.1rem; letter-spacing: 1.5px; color: #ffffff; }
         .rodape-descricao { font-size: 0.92rem; color: rgba(255, 255, 255, 0.4); max-width: 400px; }
-        .rodape-coluna h5 { font-size: 1rem; font-weight: 600; color: #ffffff; margin-bottom: 5px; }
         .rodape-links { display: flex; flex-direction: column; gap: 10px; }
         .rodape-links a { font-size: 0.92rem; color: rgba(255, 255, 255, 0.5); transition: 0.3s; }
         .rodape-links a:hover { color: #6fb1fc; }
         .rodape-direitos { border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: rgba(255, 255, 255, 0.4); }
-
-        .whatsapp-flutuante { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background-color: #25d366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); z-index: 2000; }
-        @media (max-width: 992px) { .contact-container, .rodape-container { grid-template-columns: 1fr; gap: 40px; } .rodape-direitos { flex-direction: column; gap: 10px; text-align: center; } }
+        .whatsapp-flutuante { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background-color: #25d366; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); z-index: 2000; }
+        @media (max-width: 992px) { .contact-container, .grid-contacto-mapa, .rodape-container { grid-template-columns: 1fr; gap: 40px; } .nav-links { display: none; } .rodape-direitos { flex-direction: column; gap: 10px; } }
     </style>
 
     <section id="contacto">
@@ -263,8 +242,8 @@
                     <input type="text" name="Nome" placeholder="Seu Nome / Empresa" required>
                     <input type="email" name="Email" placeholder="Seu E-mail" required>
                     <select name="Servico" required>
-                        <option value="Branding">Design e Marketing</option>
-                        <option value="Web Design">Website e Software</option>
+                        <option value="Branding">Design e Marketing (Branding)</option>
+                        <option value="Web Design">Website e Software (Web Design)</option>
                     </select>
                     <textarea name="Mensagem" placeholder="Requisitos do seu projeto..." rows="4" required></textarea>
                     <button type="submit" id="btn-enviar-cotacao">Enviar Solicitação</button>
@@ -287,9 +266,12 @@
             </div>
         </div>
         <div class="grid-contacto-mapa">
-            <!-- SEU IFRAME REAL DE XAI-XAI TOTALMENTE OPERACIONAL COM FILTRO DARK -->
             <div class="mapa-box">
+                <!-- Iframe Real Enviado por Si -->
                 <iframe src="https://google.com" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.01); border:1px solid rgba(255,255,255,0.06); padding:30px; border-radius:16px;">
+                <p style="font-size:0.95rem; color:rgba(255,255,255,0.5); text-align:center;">Disponibilidade presencial em Gaza (Xai-Xai) e suporte remoto de alta performance para todo o país.</p>
             </div>
         </div>
     </section>
@@ -299,7 +281,7 @@
             <div class="rodape-container">
                 <div class="rodape-coluna">
                     <span class="rodape-logo">CASTELO ART & DESIGN</span>
-                    <p class="rodape-descricao">Dinamizando o mercado visual em Moçambique com soluções sofisticadas e de alto impacto de ponta a ponta.</p>
+                    <p class="rodape-descricao">Soluções visuais sofisticadas, minimalistas e de alto impacto de ponta a ponta.</p>
                 </div>
                 <div class="rodape-coluna">
                     <h5>Navegação</h5>
@@ -307,7 +289,6 @@
                         <li><a href="#inicio">Início</a></li>
                         <li><a href="#servicos">Serviços</a></li>
                         <li><a href="#sobre">Sobre Nós</a></li>
-                        <li><a href="#portfolio">Portfólio</a></li>
                     </ul>
                 </div>
                 <div class="rodape-coluna">
@@ -320,7 +301,7 @@
             </div>
             <div class="rodape-direitos">
                 <p>&copy; 2026 Castelo Art & Design. Todos os direitos reservados.</p>
-                <p class="rodape-credito">Design & Multimédia em Moçambique.</p>
+                <p style="color:rgba(255,255,255,0.2);">Design & Multimédia em Moçambique.</p>
             </div>
         </div>
     </footer>
@@ -331,40 +312,8 @@
         document.addEventListener("DOMContentLoaded", () => {
             const slides = document.querySelectorAll(".slide");
             const dots = document.querySelectorAll(".dot");
-            let slideAtual = 0;
+            let sAtual = 0;
             setInterval(() => {
                 slides.forEach(s => s.classList.remove("active"));
                 dots.forEach(d => d.classList.remove("active"));
-                slideAtual = (slideAtual + 1) % slides.length;
-                if(slides[slideAtual]) slides[slideAtual].classList.add("active");
-                if(dots[slideAtual]) dots[slideAtual].classList.add("active");
-            }, 4000);
-            const botoes = document.querySelectorAll(".filtro-btn");
-            const itens = document.querySelectorAll(".portfolio-item");
-            botoes.forEach(btn => {
-                btn.addEventListener("click", () => {
-                    botoes.forEach(b => b.classList.remove("active"));
-                    btn.classList.add("active");
-                    const f = btn.getAttribute("data-filter");
-                    itens.forEach(i => {
-                        if (f === "todos" || i.getAttribute("data-categoria") === f) { i.classList.remove("hide"); } else { i.classList.add("hide"); }
-                    });
-                });
-            });
-            const form = document.getElementById("form-cotacao");
-            const status = document.getElementById("mensagem-status");
-            if(form) {
-                form.addEventListener("submit", async (e) => {
-                    e.preventDefault();
-                    status.textContent = "A processar envio...";
-                    status.style.display = "block";
-                    try {
-                        const response = await fetch(form.action, { method: form.method, body: new FormData(form), headers: {'Accept': 'application/json'} });
-                        if (response.ok) { status.textContent = "Entregue com sucesso!"; form.reset(); } else { status.textContent = "Erro ao enviar."; }
-                    } catch { status.textContent = "Erro de rede."; }
-                });
-            }
-        });
-    </script>
-</body>
-</html>
+                
