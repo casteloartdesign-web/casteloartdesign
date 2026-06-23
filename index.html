@@ -5,50 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Castelo Art & Design | Portfólio Oficial</title>
     
-    <!-- Chamada Corrigida das Fontes Google e Ícones Font Awesome -->
+    <!-- Links Corrigidos: Fontes Google e Ícones Font Awesome -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cloudflare.com">
 
     <style>
-        /* BASE & RESET */
+        /* CONFIGURAÇÕES GERAIS */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         body { background: #13222f; color: rgba(255, 255, 255, 0.85); line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; }
         a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
         
-        /* HEADER NAV */
+        /* MENU SUPERIOR (HEADER) */
         header { position: fixed; width: 100%; top: 0; background: #13222f; border-bottom: 1px solid rgba(255, 255, 255, 0.05); z-index: 1000; }
         .nav-container { max-width: 1200px; margin: 0 auto; padding: 25px 20px; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-weight: 700; font-size: 1.2rem; letter-spacing: 1.5px; color: #fff; }
         .logo span { color: #00adb5; }
         
-        /* LINKS SOCIAIS DO CABEÇALHO */
+        /* ÍCONES DE REDES SOCIAIS (TOPO) */
         .social-header { display: flex; gap: 15px; }
         .social-header a { font-size: 1.2rem; color: rgba(255, 255, 255, 0.6); }
         .social-header a:hover { color: #00adb5; transform: translateY(-2px); }
 
-        /* CONTEÚDO E GRELHA RESPONSIVA */
+        /* ESTRUTURA PRINCIPAL */
         main { max-width: 1200px; margin: 120px auto 40px auto; padding: 20px; width: 100%; flex: 1; }
         .hero { text-align: center; padding: 40px 0; }
         .hero h1 { font-size: 2.5rem; color: #fff; margin-bottom: 15px; font-weight: 700; }
         .hero p { max-width: 600px; margin: 0 auto; color: rgba(255, 255, 255, 0.6); }
 
-        /* CAIXAS PREENCHIDAS COM ÍCONES */
+        /* GRELHA DE CAIXAS PREENCHIDAS (GRID) */
         .grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin: 40px 0; }
-        .card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); padding: 35px 25px; border-radius: 8px; text-align: center; }
+        .card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); padding: 35px 25px; border-radius: 8px; text-align: center; transition: all 0.3s ease; }
+        .card:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.04); border-color: #00adb5; }
         .card i { font-size: 2.5rem; color: #00adb5; margin-bottom: 20px; display: inline-block; }
         .card h3 { color: #fff; font-size: 1.3rem; margin-bottom: 12px; }
         .card p { font-size: 0.95rem; color: rgba(255, 255, 255, 0.6); }
 
-        /* INTEGRAÇÃO DO MAPA GOOGLE */
+        /* BLCO DO MAPA GOOGLE */
         .map-section { background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.05); padding: 30px; border-radius: 8px; margin: 40px 0; }
         .map-section h2 { color: #fff; font-size: 1.4rem; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; gap: 10px; }
         .map-section h2 i { color: #00adb5; }
         .map-wrapper { position: relative; width: 100%; height: 0; padding-bottom: 40%; overflow: hidden; border-radius: 6px; }
         .map-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-        /* BOTÃO FLUTUANTE WHATSAPP */
+        /* BOTÃO FLUTUANTE DO WHATSAPP */
         .whatsapp-btn { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: #fff; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; box-shadow: 0 4px 12px rgba(0,0,0,0.4); z-index: 999; }
         .whatsapp-btn:hover { transform: scale(1.08); background: #20ba5a; }
 
@@ -60,11 +61,11 @@
         .footer-socials a { font-size: 0.9rem; color: rgba(255, 255, 255, 0.4); }
         .footer-socials a:hover { color: #00adb5; }
 
-        /* PROGRAMAÇÃO DE AUTO-AJUSTE (TELEMÓVEIS) */
+        /* REGRAS DE ADAPTAÇÃO PARA TELEMÓVEIS */
         @media (max-width: 768px) {
             .nav-container { padding: 20px; }
             .hero h1 { font-size: 1.9rem; }
-            .map-wrapper { padding-bottom: 65%; } /* Alarga a proporção do mapa para ecrãs verticais */
+            .map-wrapper { padding-bottom: 65%; } /* Alarga a proporção vertical do mapa no telemóvel */
             .footer-inner { flex-direction: column; text-align: center; justify-content: center; padding: 25px 20px; }
             .footer-socials { justify-content: center; }
             .whatsapp-btn { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 1.6rem; }
@@ -73,7 +74,7 @@
 </head>
 <body>
 
-    <!-- CABEÇALHO -->
+    <!-- CABEÇALHO COM REDES SOCIAIS ATIVAS -->
     <header>
         <div class="nav-container">
             <a href="#" class="logo">Castelo Art<span>&</span>Design</a>
@@ -89,48 +90,48 @@
     <!-- CONTEÚDO PRINCIPAL -->
     <main>
         <section class="hero">
-            <h1>Inovação e Sofisticação</h1>
-            <p>Levando soluções criativas e de excelência visual para o seu negócio, aliado a projetos de altíssima qualidade em Moçambique.</p>
+            <h1>Inovação e Sofisticação Visual</h1>
+            <p>Levando soluções criativas e de excelência para o seu negócio, aliado a projetos de altíssima qualidade e excelente custo-benefício em Moçambique.</p>
         </section>
 
-        <!-- SECÇÃO DE CAIXAS PREENCHIDAS E COM ÍCONES -->
+        <!-- CAIXAS DE SERVIÇOS TOTALMENTE CONFIGURADAS -->
         <section class="grid-services">
             <div class="card">
                 <i class="fas fa-palette"></i>
                 <h3>Design e Marketing</h3>
-                <p>Identidade Visual, Manuais de Marca, Banners, Folders, Ilustrações e Cartões de Visita.</p>
+                <p>Identidade Visual, Manuais de Marca, Banners, Folders, Ilustrações e Cartões de Visita Corporativos.</p>
             </div>
             <div class="card">
                 <i class="fas fa-laptop-code"></i>
                 <h3>Website e Software</h3>
-                <p>Domínio, Hospedagem Corporativa, E-mail Profissional, Design Responsivo e interfaces UI/UX.</p>
+                <p>Domínio, Hospedagem Corporativa, E-mail Profissional, Interfaces UI/UX e Design Responsivo.</p>
             </div>
             <div class="card">
                 <i class="fas fa-cube"></i>
                 <h3>Design Editorial & 3D</h3>
-                <p>Paginação de Revistas, Relatórios Corporativos, Catálogos Institucionais e Modelação 3D.</p>
+                <p>Paginação de Revistas, Relatórios Institucionais, Catálogos e Modelação de Packaging 3D.</p>
             </div>
         </section>
 
-        <!-- SECÇÃO DO MAPA FORNECIDO -->
+        <!-- MAPA DO GOOGLE INCORPORADO -->
         <section class="map-section">
-            <h2><i class="fas fa-map-location-dot"></i> Nossa Localização em Gaza</h2>
+            <h2><i class="fas fa-map-location-dot"></i> Nossa Localização</h2>
             <div class="map-wrapper">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d225.90856103748362!2d33.64683062021073!3d-25.049782877292945!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2smz!4v1782208633884!5m2!1sen!2smz" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
     </main>
 
-    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
     <a href="https://wa.me/message/MBCYKCOSRBHXP1" class="whatsapp-btn" target="_blank" aria-label="Contacto WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- RODAPÉ ELEGANTE EXTENSIVO -->
+    <!-- RODAPÉ COMPLETO MINIMALISTA DE LADO A LADO -->
     <footer>
         <div class="footer-inner">
             <div class="footer-copy">
-                &copy; 2026 Castelo Art & Design. Todos os direitos reservados. Província de Gaza, Moçambique.
+                &copy; 2026 Castelo Art & Design. Todos os direitos reservados. Moçambique.
             </div>
             <div class="footer-socials">
                 <a href="https://www.facebook.com/share/1QN49QuTbi/?mibextid=wwXIfr" target="_blank">Facebook</a>
