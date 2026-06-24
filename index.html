@@ -171,62 +171,64 @@
     </section>
        </style>
 
-    <section id="portfolio">
-        <h2>Projectos</h2>
-        <p class="sec-subtitulo">Confira alguns dos nossos últimos projetos e soluções desenvolvidas.</p>
-        <portfolio-filtros { display: flex; justify-content: center; gap: 15px; margin-bottom: 35px; flex-wrap: wrap; }
-        <filtro-btn { padding: 8px 20px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); color: rgba(255,255,255,0.7); border-radius: 30px; cursor: pointer; transition: 0.3s; }
-        <filtro-btn.active, .filtro-btn:hover { background: #6fb1fc; border-color: #6fb1fc; color: #0f2027; font-weight: 600; }
-        
-        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .portfolio-item { background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 20px; overflow: hidden; transition: 0.3s; }
-        .portfolio-item.hide { display: none !important; }
-        .item-media-placeholder { background: rgba(255, 255, 255, 0.02); height: 220px; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.2); font-size: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
-        .item-detalhes { padding: 20px; }
+         /* ==========================================================================
+   ESTILIZAÇÃO ADICIONAL (PORTFÓLIO, FORMULÁRIO E FOOTER)
+   ========================================================================== */
+.portfolio-filtros { display: flex; justify-content: center; gap: 15px; margin-bottom: 35px; flex-wrap: wrap; }
+.filtro-btn { padding: 8px 20px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); color: rgba(255,255,255,0.7); border-radius: 30px; cursor: pointer; transition: 0.3s; }
+.filtro-btn.active, .filtro-btn:hover { background: #6fb1fc; border-color: #6fb1fc; color: #0f2027; font-weight: 600; }
 
-        .empresas-parceiras-section { margin-bottom: 50px; }
-        .empresas-parceiras-section h4 { font-size: 0.9rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
-        .logos-grid-placeholder { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
-        .logo-box { border: 1px dashed rgba(255, 255, 255, 0.1); height: 75px; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: rgba(255,255,255,0.25); font-size: 0.9rem; }
+.portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+.portfolio-item { background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 20px; overflow: hidden; transition: 0.3s; }
+.portfolio-item.hide { display: none !important; }
+.item-media-placeholder { background: rgba(255, 255, 255, 0.02); height: 220px; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.2); font-size: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.item-detalhes { padding: 20px; }
 
-        .contact-container { display: grid; grid-template-columns: 1.2fr 1fr; gap: 50px; }
-        form { display: flex; flex-direction: column; gap: 15px; }
-        input, select, textarea { padding: 15px; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02); color: #ffffff; border-radius: 12px; font-size: 0.95rem; }
-        input:focus, select:focus, textarea:focus { border-color: #6fb1fc; outline: none; background: rgba(255,255,255,0.04); }
-        select option { background: #203a43; color: white; }
-        form button { padding: 15px; background: #ffffff; color: #0f2027; border: none; border-radius: 12px; cursor: pointer; font-weight: 600; transition: 0.3s; }
-        form button:hover { background: #6fb1fc; color: #ffffff; }
+.empresas-parceiras-section { margin-bottom: 50px; }
+.empresas-parceiras-section h4 { font-size: 0.9rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+.logos-grid-placeholder { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
+.logo-box { border: 1px dashed rgba(255, 255, 255, 0.1); height: 75px; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: rgba(255,255,255,0.25); font-size: 0.9rem; }
 
-        .info-contactos { display: flex; flex-direction: column; gap: 20px; margin: 25px 0; }
-        .info-contactos p { display: flex; align-items: center; gap: 15px; font-size: 1.05rem; }
-        .info-contactos i { color: #6fb1fc; font-size: 1.2rem; }
-        .link-direto:hover { color: #6fb1fc; text-decoration: underline; }
+.contact-container { display: grid; grid-template-columns: 1.2fr 1fr; gap: 50px; }
+form { display: flex; flex-direction: column; gap: 15px; }
+input, select, textarea { padding: 15px; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02); color: #ffffff; border-radius: 12px; font-size: 0.95rem; }
+input:focus, select:focus, textarea:focus { border-color: #6fb1fc; outline: none; background: rgba(255,255,255,0.04); }
+select option { background: #203a43; color: white; }
+form button { padding: 15px; background: #ffffff; color: #0f2027; border: none; border-radius: 12px; cursor: pointer; font-weight: 600; transition: 0.3s; }
+form button:hover { background: #6fb1fc; color: #ffffff; }
 
-        .redes-icons { display: flex; gap: 15px; }
-        .redes-icons a { width: 45px; height: 45px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: 0.3s; }
-        .redes-icons a:hover { transform: translateY(-4px); color: #ffffff; }
-        .redes-icons a:nth-child(1):hover { background: #1877f2; }
-        .redes-icons a:nth-child(2):hover { background: #e1306c; }
-        .redes-icons a:nth-child(3):hover { background: #0077b5; }
-        .redes-icons a:nth-child(4):hover { background: #25d366; }
+.info-contactos { display: flex; flex-direction: column; gap: 20px; margin: 25px 0; }
+.info-contactos p { display: flex; align-items: center; gap: 15px; font-size: 1.05rem; }
+.info-contactos i { color: #6fb1fc; font-size: 1.2rem; }
+.link-direto:hover { color: #6fb1fc; text-decoration: underline; }
 
-        #mensagem-status { margin-top: 15px; padding: 12px; border-radius: 8px; display: none; }
-        #mensagem-status.sucesso { display: block; background: rgba(37, 211, 102, 0.1); border: 1px solid #25d366; color: #25d366; }
-        #mensagem-status.erro { display: block; background: rgba(255, 75, 43, 0.1); border: 1px solid #ff4b2b; color: #ff4b2b; }
+.redes-icons { display: flex; gap: 15px; }
+.redes-icons a { width: 45px; height: 45px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: 0.3s; }
+.redes-icons a:hover { transform: translateY(-4px); color: #ffffff; }
+.redes-icons a:nth-child(1):hover { background: #1877f2; }
+.redes-icons a:nth-child(2):hover { background: #e1306c; }
+.redes-icons a:nth-child(3):hover { background: #0077b5; }
+.redes-icons a:nth-child(4):hover { background: #25d366; }
 
-        footer { background: #0a151a; border-top: 1px solid rgba(255,255,255,0.06); padding: 50px 20px 25px; margin-top: 60px; }
-        .rodape-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
-        .rodape-coluna h5 { color: white; font-size: 1rem; margin-bottom: 15px; }
-        .rodape-links li { margin-bottom: 8px; font-size: 0.9rem; color: rgba(255,255,255,0.5); }
-        .rodape-links a:hover { color: #6fb1fc; }
-        .rodape-direitos { border-top: 1px solid rgba(255,255,255,0.05); max-width: 1200px; margin: 30px auto 0 auto; padding-top: 20px; display: flex; justify-content: space-between; font-size: 0.85rem; color: rgba(255,255,255,0.4); }
+#mensagem-status { margin-top: 15px; padding: 12px; border-radius: 8px; display: none; }
+#mensagem-status.sucesso { display: block; background: rgba(37, 211, 102, 0.1); border: 1px solid #25d366; color: #25d366; }
+#mensagem-status.erro { display: block; background: rgba(255, 75, 43, 0.1); border: 1px solid #ff4b2b; color: #ff4b2b; }
 
-        .whatsapp-flutuante { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background-color: #25d366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 2000; animation: pulse 2s infinite; }
-        @keyframes pulse { 0% { transform: scale(1); } 70% { transform: scale(1.05); } 100% { transform: scale(1); } }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+footer { background: #0a151a; border-top: 1px solid rgba(255,255,255,0.06); padding: 50px 20px 25px; margin-top: 60px; }
+.rodape-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+.rodape-coluna h5 { color: white; font-size: 1rem; margin-bottom: 15px; }
+.rodape-links li { margin-bottom: 8px; font-size: 0.9rem; color: rgba(255,255,255,0.5); }
+.rodape-links a:hover { color: #6fb1fc; }
+.rodape-direitos { border-top: 1px solid rgba(255,255,255,0.05); max-width: 1200px; margin: 30px auto 0 auto; padding-top: 20px; display: flex; justify-content: space-between; font-size: 0.85rem; color: rgba(255,255,255,0.4); }
 
-        @media (max-width: 992px) { .contact-container, .rodape-container, .identidade-cards { grid-template-columns: 1fr; gap: 35px; } .nav-links { display: none; } }
-    </style>
+.whatsapp-flutuante { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background-color: #25d366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 2000; animation: pulse 2s infinite; transition: transform 0.3s; }
+.whatsapp-flutuante:hover { transform: scale(1.1); }
+
+@keyframes pulse { 0% { transform: scale(1); } 70% { transform: scale(1.05); } 100% { transform: scale(1); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+@media (max-width: 992px) { .contact-container, .rodape-container, .identidade-cards { grid-template-columns: 1fr; gap: 35px; } .nav-links { display: none; } }
+@media (prefers-reduced-motion: reduce) { .whatsapp-flutuante { animation: none; } }
 
     <!-- 4. PORTFÓLIO -->
     <section id="portfolio">
@@ -291,44 +293,124 @@
         .empresas-parceiras-section h4 { font-size: 0.9rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
         .logos-grid-placeholder { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
         .logo-box { border: 1px dashed rgba(255, 255, 255, 0.15); height: 75px; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: rgba(255,255,255,0.4); font-size: 0.9rem; font-weight: 500; gap: 8px; }
+        
+        /* LAYOUT DE CONTACTO CONFORME CAPTURA DE ECRÃ */
+        .contact-container { display: grid; grid-template-columns: 1.2fr 1fr; gap: 50px; margin-bottom: 40px; }
+        form { display: flex; flex-direction: column; gap: 15px; }
+        input, select, textarea { padding: 15px; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02); color: #ffffff; border-radius: 12px; font-size: 0.95rem; }
+        input:focus, select:focus, textarea:focus { border-color: #6fb1fc; outline: none; background: rgba(255,255,255,0.04); }
+        select option { background: #203a43; color: white; }
+        form button { padding: 15px; background: #ffffff; color: #0f2027; border: none; border-radius: 12px; cursor: pointer; font-weight: 600; transition: 0.3s; }
+        form button:hover { background: #6fb1fc; color: #ffffff; }
+        
+        .info-contactos { display: flex; flex-direction: column; gap: 20px; margin: 25px 0; }
+        .info-contactos p { display: flex; align-items: center; gap: 15px; font-size: 1.05rem; }
+        .info-contactos i { color: #6fb1fc; font-size: 1.2rem; width: 20px; text-align: center; }
+        
+        /* BOTÕES DE REDES SOCIAIS IDENTICOS À IMAGEM */
+        .redes-icons { display: flex; gap: 15px; margin-top: 15px; }
+        .redes-icons a { width: 45px; height: 45px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: 0.3s; color: rgba(255,255,255,0.8); }
+        .redes-icons a:hover { transform: translateY(-4px); color: #ffffff; border-color: transparent; }
+        .redes-icons a:nth-child(1):hover { background: #1877f2; } /* Facebook */
+        .redes-icons a:nth-child(2):hover { background: #e1306c; } /* Instagram */
+        .redes-icons a:nth-child(3):hover { background: #0077b5; } /* LinkedIn */
+        .redes-icons a:nth-child(4):hover { background: #25d366; } /* WhatsApp */
 
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p class="sec-subtitulo">Preparados para tornar o seu negócio mais produtivo.</p>
-        <div class="contact-container">
-            <div class="form-box">
-                <h3>Pedir Cotação</h3>
-                <form id="form-cotacao" action="https://formspree.io" method="POST">
-                    <input type="text" name="Nome" placeholder="Seu Nome / Empresa" required>
-                    <input type="email" name="Email" placeholder="Seu E-mail" required>
-                    <select name="Servico" required>
-                        <option value="Branding">Design e Marketing (Branding)</option>
-                        <option value="Web Design">Website e Software (Web Design)</option>
-                    </select>
-                    <textarea name="Mensagem" placeholder="Requisitos do seu projeto..." rows="4" required></textarea>
-                    <button type="submit" id="btn-enviar-cotacao">Enviar Solicitação</button>
-                    <div id="mensagem-status"></div>
-                </form>
-            </div>
-            <div class="info-caixa">
-                <h3>Canais Oficiais</h3>
-                <div class="info-contactos">
-                    <p><i class="fas fa-map-marker-alt"></i> <span>Xai-Xai, Moçambique</span></p>
-                    <p><i class="fas fa-envelope"></i> <span><a href="mailto:casteloartdesign@gmail.com" class="link-direto">casteloartdesign@gmail.com</a></span></p>
-                    <p><i class="fas fa-phone-alt"></i> <span><a href="tel:+258878871087" class="link-direto">+258 87 887 1087</a></span></p>
-                </div>
-                <div class="redes-icons">
-                    <a href="https://facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
-                </div>
+        /* INTEGRAÇÃO FLUIDA DO MAPA */
+        .map-section { background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.05); padding: 30px; border-radius: 16px; margin-top: 40px; }
+        .map-wrapper { position: relative; width: 100%; height: 0; padding-bottom: 40%; overflow: hidden; border-radius: 12px; }
+        .map-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        /* RODAPÉ INTEGRAL DE LADO A LADO */
+        footer { background: #091317; border-top: 1px solid rgba(255, 255, 255, 0.06); width: 100%; margin-top: auto; z-index: 10; }
+        .footer-inner { max-width: 1200px; margin: 0 auto; padding: 30px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+        .footer-copy { font-size: 0.88rem; color: rgba(255, 255, 255, 0.4); }
+        .footer-links { display: flex; gap: 25px; }
+        .footer-links a { font-size: 0.9rem; color: rgba(255, 255, 255, 0.4); transition: 0.3s; }
+        .footer-links a:hover { color: #6fb1fc; }
+
+        /* AUTO-AJUSTE PARA TELEMÓVEIS */
+        @media (max-width: 900px) {
+            .contact-container { grid-template-columns: 1fr; gap: 40px; }
+            .nav-links { display: none; } /* Oculta links simples em telemóveis para evitar quebras */
+            .map-wrapper { padding-bottom: 65%; }
+            .footer-inner { flex-direction: column; text-align: center; justify-content: center; }
+            .footer-links { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER DE NAVEGAÇÃO -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">CASTELO ART & DESIGN</a>
+            <div class="nav-links">
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre Nós</a>
+                <a href="#portfolio">Portfólio</a>
+                <a href="#contacto">Contacte-nos</a>
             </div>
         </div>
-        <div class="grid-contacto-mapa">
-            <div class="mapa-box">
-                <!-- Iframe Real Enviado por Si -->
-                <div class="map-section">
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main style="flex: 1; width: 100%;">
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <h3>Preparados para tornar o seu negócio mais produtivo.</h3>
+            
+            <div class="contact-container">
+                <!-- PEDIR COTAÇÃO -->
+                <div>
+                    <h3 style="margin-bottom: 10px;">Pedir Cotação</h3>
+                    <p style="color: rgba(255,255,255,0.5); margin-bottom: 25px; font-size: 0.95rem;">Conte-nos sobre o projeto e receba uma proposta detalhada.</p>
+                    <form>
+                        <input type="text" placeholder="Seu Nome / Empresa" required>
+                        <input type="email" placeholder="Seu E-mail" required>
+                        <select required>
+                            <option value="" disabled selected>Selecione o Serviço</option>
+                            <option value="branding">Branding & Logótipos</option>
+                            <option value="web">Website & Software</option>
+                            <option value="editorial">Design Editorial & 3D</option>
+                        </select>
+                        <textarea rows="5" placeholder="Fale sobre os requisitos do projeto..." required></textarea>
+                        <button type="submit">Enviar Solicitação</button>
+                    </form>
+                </div>
+                
+                <!-- CANAIS OFICIAIS E REDES SOCIAIS (IGUAL À IMAGEM) -->
+                <div>
+                    <h3 style="margin-bottom: 35px;">Canais Oficiais</h3>
+                    <div class="info-contactos">
+                        <p><i class="fas fa-envelope"></i> <span><strong>E-mail:</strong> <a href="mailto:casteloartdesign@gmail.com" class="link-direto">casteloartdesign@gmail.com</a></span></p>
+                        <p><i class="fas fa-phone"></i> <span><strong>Contacto:</strong> <a href="tel:+258878871087" class="link-direto">+258 87 887 1087</a></span></p>
+                        <p><i class="fas fa-location-dot"></i> <span><strong>Localização:</strong> Moçambique</span></p>
+                    </div>
+                    
+                    <!-- ÍCONES SOCIAIS INCORPORADOS COM OS SEUS LINKS -->
+                    <div class="redes-icons">
+                        <a href="https://www.facebook.com/share/1QN49QuTbi/?mibextid=wwXIfr" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/casteloartdesign?igsh=dmphdDgwMmF1YjM3" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/castelo-art-design-49b384402?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/message/MBCYKCOSRBHXP1" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CAIXAS DO DIALOGO DE PARCEIROS (PREENCHIDAS COM ÍCONES E TEXTO) -->
+            <div class="empresas-parceiras-section">
+                <h4>Nossos Serviços & Tecnologias</h4>
+                <div class="logos-grid-placeholder">
+                    <div class="logo-box"><i class="fas fa-bezier-curve"></i> Adobe Illustrator</div>
+                    <div class="logo-box"><i class="fas fa-code"></i> UI / UX Design</div>
+                    <div class="logo-box"><i class="fas fa-cubes"></i> Modelação 3D</div>
+                    <div class="logo-box"><i class="fas fa-server"></i> Web Hosting</div>
+                </div>
+            </div>
+
+            <!-- MAPA EM EMBED GOOGLE INCORPORADO -->
+            <div class="map-section">
                 <h3 style="font-size: 1.1rem; margin-bottom: 15px;"><i class="fas fa-map-marked-alt" style="color: #6fb1fc; margin-right: 8px;"></i> Coordenadas Geográficas / Gaza</h3>
                 <div class="map-wrapper">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d225.90856103748362!2d33.64683062021073!3d-25.049782877292945!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2smz!4v1782208633884!5m2!1sen!2smz" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -336,101 +418,20 @@
             </div>
         </section>
     </main>
-            <div style="display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.01); border:1px solid rgba(255,255,255,0.06); padding:30px; border-radius:16px;">
-                <p style="font-size:0.95rem; color:rgba(255,255,255,0.5); text-align:center;">Disponibilidade presencial em Gaza (Xai-Xai) e suporte remoto de alta performance para todo o país.</p>
-            </div>
-        </div>
-    </section>
-     </style>
 
-        <!-- RODAPÉ GLOBAL FLUIDO -->
-    <footer class="rodape-institucional">
-        <div class="rodape-conteudo-global">
-            <div class="rodape-container">
-                <div class="rodape-coluna">
-                    <span class="rodape-logo">CASTELO ART & DESIGN</span>
-                    <p class="rodape-descricao">Dinamizando o mercado visual em Moçambique com soluções sofisticadas, minimalistas e de alto impacto de ponta a ponta.</p>
-                </div>
-                <div class="rodape-coluna">
-                    <h5>Navegação</h5>
-                    <ul class="rodape-links">
-                        <li><a href="#inicio">Início</a></li>
-                        <li><a href="#servicos">Serviços</a></li>
-                        <li><a href="#sobre">Sobre Nós</a></li>
-                        <li><a href="#portfolio">Portfólio</a></li>
-                    </ul>
-                </div>
-                <div class="rodape-coluna">
-                    <h5>Suporte</h5>
-                    <ul class="rodape-links">
-                        <li><a href="#contacto">Pedir Cotação</a></li>
-                        <li><a href="mailto:casteloartdesign@gmail.com">Suporte via E-mail</a></li>
-                    </ul>
-                </div>
+    <!-- RODAPÉ MINIMALISTA INTEGRAL (LADO A LADO) -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-copy">
+                &copy; 2026 Castelo Art & Design. Todos os direitos reservados.
             </div>
-            <div class="rodape-direitos">
-                <p>&copy; 2026 Castelo Art & Design. Todos os direitos reservados.</p>
-                <p style="color:rgba(255,255,255,0.2);">Design & Multimédia em Moçambique.</p>
+            <div class="footer-links">
+                <a href="https://www.facebook.com/share/1QN49QuTbi/?mibextid=wwXIfr" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/casteloartdesign?igsh=dmphdDgwMmF1YjM3" target="_blank">Instagram</a>
+                <a href="https://www.linkedin.com/in/castelo-art-design-49b384402?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">LinkedIn</a>
             </div>
         </div>
     </footer>
 
-    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
-    <a href="https://wa.me" class="whatsapp-flutuante" target="_blank" rel="noopener">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- LÓGICA DE EXECUÇÃO JAVASCRIPT UNIFICADA -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            // Slider Automático
-            const slides = document.querySelectorAll(".slide");
-            const dots = document.querySelectorAll(".dot");
-            let slideAtual = 0;
-            function mostrarSlide(index) {
-                slides.forEach(s => s.classList.remove("active"));
-                dots.forEach(d => d.classList.remove("active"));
-                if(slides[index]) slides[index].classList.add("active");
-                if(dots[index]) dots[index].classList.add("active");
-            }
-            setInterval(() => {
-                slideAtual = (slideAtual + 1) % slides.length;
-                mostrarSlide(slideAtual);
-            }, 4000);
-            dots.forEach((dot, index) => {
-                dot.addEventListener("click", () => { slideAtual = index; mostrarSlide(slideAtual); });
-            });
-
-            // Filtros Dinâmicos
-            const botoes = document.querySelectorAll(".filtro-btn");
-            const itens = document.querySelectorAll(".portfolio-item");
-            botoes.forEach(btn => {
-                btn.addEventListener("click", () => {
-                    botoes.forEach(b => b.classList.remove("active"));
-                    btn.classList.add("active");
-                    const f = btn.getAttribute("data-filter");
-                    itens.forEach(i => {
-                        if (f === "todos" || i.getAttribute("data-categoria") === f) { i.classList.remove("hide"); } else { i.className = "portfolio-item hide"; }
-                    });
-                });
-            });
-
-            // Envio assíncrono via AJAX Formspree
-            const form = document.getElementById("form-cotacao");
-            const status = document.getElementById("mensagem-status");
-            if(form) {
-                form.addEventListener("submit", async (e) => {
-                    e.preventDefault();
-                    status.textContent = "A processar envio...";
-                    status.className = "sucesso";
-                    status.style.display = "block";
-                    try {
-                        const response = await fetch(form.action, { method: form.method, body: new FormData(form), headers: {'Accept': 'application/json'} });
-                        if (response.ok) { status.textContent = "Entregue com sucesso!"; form.reset(); } else { status.textContent = "Erro ao enviar."; }
-                    } catch { status.textContent = "Erro de ligação à rede."; }
-                });
-            }
-        });
-    </script>
 </body>
 </html>
