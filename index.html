@@ -169,6 +169,114 @@
             </div>
         </div>
     </section>
+     .portfolio-filtros { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap; }
+        .filtro-btn { padding: 12px 26px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; font-weight: 500; border-radius: 30px; cursor: pointer; transition: 0.3s; }
+        .filtro-btn:hover { background: rgba(255, 255, 255, 0.08); color: #ffffff; transform: translateY(-2px); }
+        .filtro-btn.active { background: #6fb1fc; border-color: #6fb1fc; color: #0f2027; font-weight: 600; box-shadow: 0 4px 15px rgba(111, 177, 252, 0.25); }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .portfolio-item { background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 20px; overflow: hidden; transition: 0.3s; display: block; }
+        .portfolio-item:hover { transform: translateY(-6px); border-color: #6fb1fc; background: rgba(255, 255, 255, 0.03); }
+        .portfolio-item.hide { display: none !important; }
+        .item-media-placeholder { background: rgba(255, 255, 255, 0.02); height: 240px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; color: rgba(255, 255, 255, 0.3); border-bottom: 1px solid rgba(255, 255, 255, 0.06); font-size: 2.5rem; }
+        .item-detalhes { padding: 25px; }
+        .item-detalhes h4 { color: #ffffff; font-size: 1.15rem; margin-bottom: 5px; }
+        .item-detalhes p { color: rgba(255, 255, 255, 0.5); font-size: 0.9rem; }
+    </style>
+
+    <section id="portfolio">
+        <h2>Projectos</h2>
+        <p class="sec-subtitulo">Confira alguns dos nossos últimos projetos e soluções desenvolvidas.</p>
+        
+        <div class="portfolio-filtros">
+            <button class="filtro-btn active" data-filter="todos">Todos Trabalhos</button>
+            <button class="filtro-btn" data-filter="branding">Design & Branding</button>
+            <button class="filtro-btn" data-filter="web">Páginas Web</button>
+        </div>
+        
+        <div class="portfolio-grid">
+            <!-- Link do Behance adicionado na Identidade Visual -->
+            <a href="https://behance.net" target="_blank" rel="noopener" class="portfolio-item" data-categoria="branding">
+                <div class="item-media-placeholder"><i class="fas fa-palette"></i></div>
+                <div class="item-detalhes">
+                    <h4>Identidade Visual Pessoal (Behance)</h4>
+                    <p>Design de Logótipo & Branding Criativo</p>
+                </div>
+            </a>
+
+            <div class="portfolio-item" data-categoria="web">
+                <div class="item-media-placeholder"><i class="fas fa-laptop-code"></i></div>
+                <div class="item-detalhes"><h4>Plataforma Corporativa</h4><p>[Campos Gráficos / UI-UX]</p></div>
+            </div>
+        </div>
+    </section>
+    <style>
+        .contact-container { display: grid; grid-template-columns: 1.2fr 1fr; gap: 50px; margin-bottom: 40px; }
+        .grid-contacto-mapa { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; margin-top: 40px; }
+        .mapa-box { width: 100%; height: 380px; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08); }
+        .mapa-box iframe { width: 100% !important; height: 100% !important; border: 0 !important; filter: grayscale(1) invert(0.95) contrast(1.2); }
+        .info-caixa { display: flex; flex-direction: column; gap: 15px; background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.06); padding: 30px; border-radius: 16px; }
+        .redes-icons { display: flex; gap: 15px; }
+        .redes-icons a { width: 45px; height: 45px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: 0.3s; }
+        .redes-icons a:hover { transform: translateY(-4px); border-color: #6fb1fc; }
+        #mensagem-status { margin-top: 15px; padding: 12px; border-radius: 8px; display: none; }
+        #mensagem-status.sucesso { display: block; background: rgba(37, 211, 102, 0.1); border: 1px solid #25d366; color: #25d366; }
+        footer { background: rgba(10, 21, 26, 0.98); border-top: 1px solid rgba(255, 255, 255, 0.06); padding: 70px 0 30px 0; margin-top: 60px; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; }
+        .rodape-conteudo-global { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .rodape-container { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; padding-bottom: 40px; }
+        .rodape-coluna { display: flex; flex-direction: column; gap: 15px; }
+        .rodape-logo { font-weight: 700; font-size: 1.1rem; letter-spacing: 1.5px; color: #ffffff; }
+        .rodape-descricao { font-size: 0.92rem; color: rgba(255, 255, 255, 0.4); max-width: 400px; }
+        .rodape-links { display: flex; flex-direction: column; gap: 10px; }
+        .rodape-links a { font-size: 0.92rem; color: rgba(255, 255, 255, 0.5); transition: 0.3s; }
+        .rodape-links a:hover { color: #6fb1fc; }
+        .rodape-direitos { border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: rgba(255, 255, 255, 0.4); }
+        .whatsapp-flutuante { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background-color: #25d366; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); z-index: 2000; }
+        @media (max-width: 992px) { .contact-container, .grid-contacto-mapa, .rodape-container { grid-template-columns: 1fr; gap: 40px; } .nav-links { display: none; } .rodape-direitos { flex-direction: column; gap: 10px; } }
+    </style>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p class="sec-subtitulo">Preparados para tornar o seu negócio mais produtivo.</p>
+        <div class="contact-container">
+            <div class="form-box">
+                <h3>Pedir Cotação</h3>
+                <form id="form-cotacao" action="https://formspree.io" method="POST">
+                    <input type="text" name="Nome" placeholder="Seu Nome / Empresa" required>
+                    <input type="email" name="Email" placeholder="Seu E-mail" required>
+                    <select name="Servico" required>
+                        <option value="Branding">Design e Marketing (Branding)</option>
+                        <option value="Web Design">Website e Software (Web Design)</option>
+                    </select>
+                    <textarea name="Mensagem" placeholder="Requisitos do seu projeto..." rows="4" required></textarea>
+                    <button type="submit" id="btn-enviar-cotacao">Enviar Solicitação</button>
+                    <div id="mensagem-status"></div>
+                </form>
+            </div>
+            <div class="info-caixa">
+                <h3>Canais Oficiais</h3>
+                <div class="info-contactos">
+                    <p><i class="fas fa-map-marker-alt"></i> <span>Xai-Xai, Moçambique</span></p>
+                    <p><i class="fas fa-envelope"></i> <span><a href="mailto:casteloartdesign@gmail.com" class="link-direto">casteloartdesign@gmail.com</a></span></p>
+                    <p><i class="fas fa-phone-alt"></i> <span><a href="tel:+258878871087" class="link-direto">+258 87 887 1087</a></span></p>
+                </div>
+                <div class="redes-icons">
+                    <a href="https://facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="grid-contacto-mapa">
+            <div class="mapa-box">
+                <!-- Iframe Real Enviado por Si -->
+                <iframe src="https://google.com" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.01); border:1px solid rgba(255,255,255,0.06); padding:30px; border-radius:16px;">
+                <p style="font-size:0.95rem; color:rgba(255,255,255,0.5); text-align:center;">Disponibilidade presencial em Gaza (Xai-Xai) e suporte remoto de alta performance para todo o país.</p>
+            </div>
+        </div>
+    </section>
     <!-- ==========================================================================
        PARTE 4 DE 4: CONTACTOS COMPLETO (XAI-XAI MAPS & RESPONSIVO)
        ========================================================================== -->
